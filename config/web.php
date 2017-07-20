@@ -7,6 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'language' => 'ru',
+    'defaultRoute' => 'category/index',
     'bootstrap' => ['log'],
     'components' => [
         'request' => [

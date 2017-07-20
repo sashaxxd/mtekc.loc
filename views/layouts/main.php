@@ -85,7 +85,7 @@ AppAsset::register($this);
             <div class="col-3">
                 <div id="mtex_ResponsiveMenu1">
                     <ul class="ResponsiveMenu1" id="ResponsiveMenu1">
-                        <li><a href="#"><i class="fa fa-user fa-2x">&nbsp;</i><br>Авторизация</a></li>
+                        <li><a href="#"><i class="fa fa-user fa-2x">&nbsp;</i><br>Вход</a></li>
                         <li><a href="#"><i class="fa fa-lock fa-2x">&nbsp;</i><br>Регистрация</a></li>
                         <li><a href="#"><i class="fa fa-shopping-basket fa-2x">&nbsp;</i><br>Корзина</a></li>
                     </ul>
