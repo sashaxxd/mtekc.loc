@@ -1,6 +1,9 @@
 # images
 /web/images
 
+# css
+/web/css
+
 # phpstorm project files
 .idea
 

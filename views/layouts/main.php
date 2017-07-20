@@ -125,7 +125,6 @@ AppAsset::register($this);
 
 <!-- Футер -->
 <div id="mtex_LayoutGrid12">
-
     <div id="LayoutGrid12">
 
         <div class="row">

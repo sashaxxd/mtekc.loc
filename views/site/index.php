@@ -7,10 +7,11 @@
                 <div id="mtex_PanelMenu1">
                     <a href="#PanelMenu1_markup" id="PanelMenu1">КАТАЛОГ</a>
                     <div id="PanelMenu1_markup">
+                        <!-- Вызов виджета меню -->
                         <ul class="catalog">
                             <?= \app\components\MenuWidget::widget(['tpl' => 'menu'])?>
                         </ul>
-<!-- Сюда меню вставить -->
+
                     </div>
                 </div>
             </div>
