@@ -29,7 +29,7 @@ AppAsset::register($this);
         <div class="row">
             <div class="col-1">
                 <div id="mtex_Image1">
-                    <img src="/images/bg1.jpg" id="Image1" alt="">
+                    <a href="<?= \yii\helpers\Url::home()?>"><?= Html::img("@web/images/bg1.jpg", ['alt' => 'Магазин Мтекс', 'id' => 'Image1'])  ?></a>
                 </div>
             </div>
             <div class="col-2">
@@ -112,7 +112,7 @@ AppAsset::register($this);
                     <label class="toggle" for="ResponsiveMenu2-submenu" id="ResponsiveMenu2-title">МЕНЮ<span id="ResponsiveMenu2-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
                     <input type="checkbox" id="ResponsiveMenu2-submenu">
                     <ul class="ResponsiveMenu2" id="ResponsiveMenu2">
-                        <li><a href="<?= \yii\helpers\Url::to(['/'])?>">ГЛАВНАЯ</a></li>
+                        <li><a href="<?= \yii\helpers\Url::home()?>">ГЛАВНАЯ</a></li>
                         <li><a href="#">О МАГАЗИНЕ</a></li>
                         <li><a href="#">КОНТАКТ</a></li>
                     </ul>

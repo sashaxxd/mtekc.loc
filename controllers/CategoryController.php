@@ -28,7 +28,7 @@ class CategoryController extends AppController
 
         $category = Category::findOne($id);
 
-        $this->setMeta('Магазин Мтекс | ' . $category->name);
+        $this->setMeta('Магазин Мтекс | ' . $category->name, $category->keywords, $category->description);
 
         $id = Yii::$app->request->get('id');
         $products = Product::find()->where(['category_id' => $id])->all();
