@@ -12,9 +12,10 @@ class CategoryController extends AppController
     public function actionIndex(){
 
         $hits = Product::find()->where(['hit' => '1'])->limit(6)->all();
-//        Debug($hits); die();
+        $sale = Product::find()->where(['sale' => '1'])->limit(6)->all();
          return $this->render('index',[
                    'hits' => $hits,
+                    'sale' => $sale,
          ]);
     }
     
