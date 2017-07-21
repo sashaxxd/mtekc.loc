@@ -9,24 +9,33 @@ use Yii;
 
 class CategoryController extends AppController
 {
-    public function actionIndex(){
+    public function actionIndex()
+    {
+
+        $this->setMeta('Магазин Мтекс');
 
         $hits = Product::find()->where(['hit' => '1'])->limit(6)->all();
         $sale = Product::find()->where(['sale' => '1'])->limit(6)->all();
-         return $this->render('index',[
-                   'hits' => $hits,
-                    'sale' => $sale,
-         ]);
+
+        return $this->render('index', [
+            'hits' => $hits,
+            'sale' => $sale,
+        ]);
     }
 
-    public function actionView($id){
+    public function actionView($id)
+    {
 
-          $id = Yii::$app->request->get('id');
-          $products = Product::find()->where(['category_id' => $id])->all();
-//        Debug($id);die;
-          return $this->render('view',[
-                   'products' => $products,
-          ]);
+        $category = Category::findOne($id);
+
+        $this->setMeta('Магазин Мтекс | ' . $category->name);
+
+        $id = Yii::$app->request->get('id');
+        $products = Product::find()->where(['category_id' => $id])->all();
+        return $this->render('view', [
+            'products' => $products,
+            'category' => $category,
+        ]);
     }
-    
+
 }

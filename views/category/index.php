@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Магазин мтекс';
+
 ?>
 <div id="mtex_LayoutGrid8">
     <div id="LayoutGrid8">
