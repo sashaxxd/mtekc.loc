@@ -24,14 +24,14 @@ class AppAsset extends AssetBundle
         'css/index.css',
         'css/style.css',
         'css/product-details.css',
-        'magnificpopup/magnific-popup.css',
+        'css/magnific-popup.css',
     ];
     public $js = [
 
         'js/jquery-1.12.4.min.js',
         'js/panel.min.js',
         'js/panel.js',
-        'magnificpopup/jquery.magnific-popup.min.js',
+        'js/jquery.magnific-popup.min.js',
 
 
 
