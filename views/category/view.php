@@ -75,56 +75,7 @@ use yii\helpers\Html;
                         </div>
                     </div>
                 </div>
-<!--                <div id="mtex_LayoutGrid15">-->
-<!--                    <div id="LayoutGrid15">-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-1">-->
-<!--                                <div id="mtex_Text17">-->
-<!--                                    <span id="mtex_uid16"><strong>АКЦИЯ</strong></span>-->
-<!--                                </div>-->
-<!--                                <hr id="Line11">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div id="mtex_LayoutGrid16">-->
-<!--                    <div id="LayoutGrid16">-->
-<!--                        <div class="row">-->
-<!---->
-<!--                            --><?php //if(!empty($sale)): ?>
-<!--                                --><?php //foreach ($sale as $sale):  ?>
-<!--                                    <div class="col-1" style="padding-bottom: 30px;">-->
-<!--                                        <div class="crop">-->
-<!---->
-<!---->
-<!--                                            --><?php //if($sale->sale):  ?>
-<!--                                                <div class="podnew" style="position: absolute; width: 197px; height: 170px;">-->
-<!--                                                    --><?//= Html::img("@web/images/sale.png", ['alt' => 'Акция', 'class'=>'new'])  ?><!--</div>-->
-<!--                                            --><?php //endif;  ?>
-<!---->
-<!--                                            --><?//= Html::img("@web/images/products/{$sale->img}", ['alt' => $sale->name, 'class'=>'Image5'])  ?>
-<!---->
-<!--                                        </div>-->
-<!--                                        <hr id="Line4">-->
-<!--                                        <div id="mtex_Text8">-->
-<!--                                            <span id="mtex_uid4"><strong>--><?//= $sale->price;  ?><!-- РУБ.</strong></span>-->
-<!--                                        </div>-->
-<!--                                        <div id="mtex_Text11">-->
-<!--                                            <span id="mtex_uid5">--><?//= $sale->name;  ?><!--</span>-->
-<!--                                        </div>-->
-<!--                                        <div id="mtex_FontAwesomeIcon6">-->
-<!--                                            <div id="FontAwesomeIcon6"><i class="fa fa-shopping-cart">&nbsp;</i></div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!---->
-<!--                                --><?php // endforeach;  ?>
-<!--                            --><?php //endif; ?>
-<!---->
-<!---->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+
             </div>
         </div>
     </div>
