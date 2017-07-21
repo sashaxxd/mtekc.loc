@@ -43,16 +43,16 @@ use yii\helpers\Html;
                                 <div class="crop">
 
                                     <?php if($hit->new):  ?>
-                                        <div class="podnew" style="position: absolute; width: 197px; height: 170px;">
+                                        <div class="podnew" style="position: absolute; width: 197px; height: 24px;">
                                             <?= Html::img("@web/images/new.png", ['alt' => 'Новинка', 'class'=>'new'])  ?></div>
                                     <?php endif;  ?>
 
                                     <?php if($hit->sale):  ?>
-                                        <div class="podnew" style="position: absolute; width: 197px; height: 170px;">
+                                        <div class="podnew" style="position: absolute; width: 197px; height: 24px;">
                                             <?= Html::img("@web/images/sale.png", ['alt' => 'Новинка', 'class'=>'new'])  ?></div>
                                     <?php endif;  ?>
 
-                                        <?= Html::img("@web/images/products/{$hit->img}", ['alt' => $hit->name, 'class'=>'Image5'])  ?>
+                                    <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id])?>"><?= Html::img("@web/images/products/{$hit->img}", ['alt' => $hit->name, 'class'=>'Image5'])  ?></a>
 
                                 </div>
                                 <hr id="Line4">
@@ -60,7 +60,7 @@ use yii\helpers\Html;
                                     <span id="mtex_uid4"><strong><?= $hit->price;  ?> РУБ.</strong></span>
                                 </div>
                                 <div id="mtex_Text11">
-                                    <span id="mtex_uid5"><?= $hit->name;  ?></span>
+                                    <span id="mtex_uid5"><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id])?>"> <?= $hit->name;  ?></a></span>
                                 </div>
                                 <div id="mtex_FontAwesomeIcon6">
                                     <div id="FontAwesomeIcon6"><i class="fa fa-shopping-cart">&nbsp;</i></div>
@@ -97,11 +97,11 @@ use yii\helpers\Html;
 
 
 <!--                                            --><?php //if($sale->sale):  ?>
-                                                <div class="podnew" style="position: absolute; width: 197px; height: 170px;">
+                                                <div class="podnew" style="position: absolute; width: 197px; height: 24px;">
                                                     <?= Html::img("@web/images/sale.png", ['alt' => 'Акция', 'class'=>'new'])  ?></div>
 <!--                                            --><?php //endif;  ?>
 
-                                            <?= Html::img("@web/images/products/{$sale->img}", ['alt' => $sale->name, 'class'=>'Image5'])  ?>
+                                            <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $sale->id])?>"><?= Html::img("@web/images/products/{$sale->img}", ['alt' => $sale->name, 'class'=>'Image5'])  ?></a>
 
                                         </div>
                                         <hr id="Line4">

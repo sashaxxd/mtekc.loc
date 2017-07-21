@@ -43,16 +43,17 @@ use yii\helpers\Html;
                                         <div class="crop">
 
                                             <?php if($product->new):  ?>
-                                                <div class="podnew" style="position: absolute; width: 197px; height: 170px;">
+                                                <div class="podnew" style="position: absolute; width: 197px; height: 24px;;">
                                                     <?= Html::img("@web/images/new.png", ['alt' => 'Новинка', 'class'=>'new'])  ?></div>
                                             <?php endif;  ?>
 
                                             <?php if($product->sale):  ?>
-                                                <div class="podnew" style="position: absolute; width: 197px; height: 170px;">
+                                                <div class="podnew" style="position: absolute; width: 197px; height: 24px;">
                                                     <?= Html::img("@web/images/sale.png", ['alt' => 'Новинка', 'class'=>'new'])  ?></div>
                                             <?php endif;  ?>
 
-                                            <?= Html::img("@web/images/products/{$product->img}", ['alt' => $hit->name, 'class'=>'Image5'])  ?>
+                                            <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id])?>">
+                                                <?= Html::img("@web/images/products/{$product->img}", ['alt' => $product->name, 'class'=>'Image5']) ?></a>
 
                                         </div>
                                         <hr id="Line4">
@@ -65,17 +66,32 @@ use yii\helpers\Html;
                                         <div id="mtex_FontAwesomeIcon6">
                                             <div id="FontAwesomeIcon6"><i class="fa fa-shopping-cart">&nbsp;</i></div>
                                         </div>
+
+                                        <!--       Кол-во просмотров                                 -->
+                                        <!--                                        <div id="mtex_FontAwesomeIcon6">-->
+                                        <!--                                            <div id="FontAwesomeIcon6"><i class="fa fa-eye">-->
+                                        <? //= $product->views; ?><!--</i></div>-->
+                                        <!--                                        </div>-->
+
                                     </div>
-
-                                <?php  endforeach;  ?>
-
-                              <?php else: ?>
-                                <h2><div class="no_products">Товаров в этой категории пока нет...</div></h2>
-                            <?php endif; ?>
+                                <?php endforeach; ?>
                         </div>
+                        <div class="appendics" style="width: 100%; height: 1px;"></div>
+                        <!-- Пагинация-->
+                        <?php
+                        echo \yii\widgets\LinkPager::widget([
+                                'pagination' => $pages,
+                            ]
+                        );
+                        ?>
+                        <!-- /Пагинация-->
+                        <?php else: ?>
+                            <h2>
+                                <div class="no_products">Товаров в этой категории пока нет...</div>
+                            </h2>
+                        <?php endif; ?>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
