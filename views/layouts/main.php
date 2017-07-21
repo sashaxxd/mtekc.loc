@@ -72,12 +72,13 @@ AppAsset::register($this);
         </div>
     </div>
 </div>
+
 <!-- Поиск и регистрация -->
 <div id="mtex_LayoutGrid4">
     <div id="LayoutGrid4">
         <div class="row">
             <div class="col-1">
-                <input type="text" id="Editbox1" name="Editbox1" value="" placeholder="&#1055;&#1054;&#1048;&#1057;&#1050;">
+                <input type="text" id="Editbox1" name="Editbox1" value="" placeholder="ПОИСК ПО САЙТУ">
             </div>
             <div class="col-2">
                 <input type="submit" id="Button1" name="" value="Найти">
@@ -111,7 +112,7 @@ AppAsset::register($this);
                     <label class="toggle" for="ResponsiveMenu2-submenu" id="ResponsiveMenu2-title">МЕНЮ<span id="ResponsiveMenu2-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
                     <input type="checkbox" id="ResponsiveMenu2-submenu">
                     <ul class="ResponsiveMenu2" id="ResponsiveMenu2">
-                        <li><a href="#">ГЛАВНАЯ</a></li>
+                        <li><a href="<?= \yii\helpers\Url::to(['/'])?>">ГЛАВНАЯ</a></li>
                         <li><a href="#">О МАГАЗИНЕ</a></li>
                         <li><a href="#">КОНТАКТ</a></li>
                     </ul>
@@ -120,8 +121,12 @@ AppAsset::register($this);
         </div>
     </div>
 </div>
+
+
 <!-- Контент -->
 <?= $content ?>
+<!-- /Контент -->
+
 
 <!-- Футер -->
 <div id="mtex_LayoutGrid12">
@@ -177,6 +182,7 @@ AppAsset::register($this);
         </div>
     </div>
 </div>
+<!-- /Футер -->
 <?php $this->endBody() ?>
 </body>
 </html>

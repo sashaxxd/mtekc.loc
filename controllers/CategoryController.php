@@ -18,5 +18,15 @@ class CategoryController extends AppController
                     'sale' => $sale,
          ]);
     }
+
+    public function actionView($id){
+
+          $id = Yii::$app->request->get('id');
+          $products = Product::find()->where(['category_id' => $id])->all();
+//        Debug($id);die;
+          return $this->render('view',[
+                   'products' => $products,
+          ]);
+    }
     
 }

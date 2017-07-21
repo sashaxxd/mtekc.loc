@@ -96,10 +96,10 @@ $this->title = 'Магазин мтекс';
                                         <div class="crop">
 
 
-                                            <?php if($sale->sale):  ?>
+<!--                                            --><?php //if($sale->sale):  ?>
                                                 <div class="podnew" style="position: absolute; width: 197px; height: 170px;">
-                                                    <?= Html::img("@web/images/sale.png", ['alt' => 'Новинка', 'class'=>'new'])  ?></div>
-                                            <?php endif;  ?>
+                                                    <?= Html::img("@web/images/sale.png", ['alt' => 'Акция', 'class'=>'new'])  ?></div>
+<!--                                            --><?php //endif;  ?>
 
                                             <?= Html::img("@web/images/products/{$sale->img}", ['alt' => $sale->name, 'class'=>'Image5'])  ?>
 
