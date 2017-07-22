@@ -185,7 +185,13 @@ AppAsset::register($this);
     </div>
 </div>
 <!-- /Футер -->
-
+<?php
+     \yii\bootstrap\Modal::begin([
+        'header' => '<h2>Корзина</h2>',
+         'footer' => 'Футер',
+     ]);
+     \yii\bootstrap\Modal::end();
+?>
 <?php $this->endBody() ?>
 </body>
 </html>
