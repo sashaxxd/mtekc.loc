@@ -77,7 +77,7 @@ AppAsset::register($this);
 <div id="mtex_LayoutGrid4">
     <div id="LayoutGrid4">
         <div class="row">
-            <form method="get" action="<?= \yii\helpers\Url::to(['category/search'])?>" >
+            <form method="get" action="<?= \yii\helpers\Url::to(['search/index'])?>" >
             <div class="col-1">
                 <input type="text" id="Editbox1" name="q" value="" placeholder="ПОИСК ПО САЙТУ">
             </div>
