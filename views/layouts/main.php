@@ -79,7 +79,7 @@ AppAsset::register($this);
         <div class="row">
             <form method="get" action="<?= \yii\helpers\Url::to(['search/index'])?>" >
             <div class="col-1">
-                <input type="text" id="Editbox1" name="q" value="" placeholder="ПОИСК ПО САЙТУ">
+                <input type="text" id="Editbox1" name="s" value="" placeholder="ПОИСК ПО САЙТУ">
             </div>
             <div class="col-2">
                 <input type="submit" id="Button1" name="" value="Найти">

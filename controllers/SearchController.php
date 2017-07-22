@@ -16,14 +16,20 @@ class SearchController extends AppController
 {
     public  function actionIndex()
     {
-        $q = Yii::$app->request->get('q');
-        $query = Product::find()->where(['like', 'name', $q]);
+        $s = trim(Yii::$app->request->get('s'));
+        if(strlen ($s) <= 3 || !$s){
+                $s = 'Слишком мало символов в поисковом запросе';
+            return $this->render('index',[
+                's' => $s,
+            ]);
+        }
+        $query = Product::find()->where(['like', 'name', $s]);
         $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 3, 'forcePageParam' => false, 'pageSizeParam' => false ]);
         $products  = $query->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('index',[
             'products' => $products,
             'pages' => $pages,
-            'q' => $q,
+            's' => $s,
 
         ]);
     }

@@ -27,7 +27,7 @@ use yii\helpers\Html;
                         <div class="row">
                             <div class="col-1">
                                 <div id="mtex_Text16">
-                                    <span id="mtex_uid3"><strong>Результат поиска по запросу: <?= $q ?></strong></span>
+                                    <span id="mtex_uid3"><strong>Результат поиска по запросу: <?= Html::encode($s) ?></strong></span>
                                 </div>
                                 <hr id="Line10">
                             </div>
