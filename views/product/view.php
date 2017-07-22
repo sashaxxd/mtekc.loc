@@ -33,7 +33,7 @@ use yii\helpers\Html;
                         <div class="row">
                             <div class="col-1">
                                 <div id="wb_Text16">
-                                    <span id="wb_uid3"><strong>ТЭДДИ РОЗОВЫЕ</strong></span>
+                                    <span id="wb_uid3"><strong><?= $product->name ?></strong></span>
                                 </div>
                                 <hr id="Line10">
                             </div>
@@ -49,7 +49,18 @@ use yii\helpers\Html;
                                     <div id="PhotoGallery1">
                                         <div class="thumbnails">
                                             <div class="thumbnail">
-                                                <a href="/images/19933247_144911686086542_5564267927403757568_n.jpg" data-rel=""><img alt="" src="/images/19933247_144911686086542_5564267927403757568_n.jpg"></a>
+                                                <?php if($product->new):  ?>
+                                                    <div class="podnew" style="position: absolute; width: 79px; height: 24px;;">
+                                                        <?= Html::img("@web/images/new.png", ['alt' => 'Новинка', 'class'=>'new'])  ?></div>
+                                                <?php endif;  ?>
+
+                                                <?php if($product->sale):  ?>
+                                                    <div class="podnew" style="position: absolute; width: 79px; height: 24px;">
+                                                        <?= Html::img("@web/images/sale.png", ['alt' => 'Новинка', 'class'=>'new'])  ?></div>
+                                                <?php endif;  ?>
+                                                <a href="/images/products/<?=$product->img?>" data-rel="">
+                                                <?= Html::img("@web/images/products/{$product->img}", ['alt' => $product->name]) ?>
+                                                </a>
                                             </div>
                                             <div class="clearfix visible-col1"></div>
                                         </div>
@@ -59,16 +70,16 @@ use yii\helpers\Html;
                             <div class="col-2">
                                 <hr id="Line8">
                                 <div id="wb_Text21">
-                                    <span id="wb_uid4"><strong>Тедди розовые</strong></span>
+                                    <span id="wb_uid4"><strong><?= $product->name ?></strong></span>
                                 </div>
                                 <div id="wb_Text5">
-                                    <span id="wb_uid5">Артикул: 436545353</span>
+                                    <span id="wb_uid5">Артикул: <?= $product->article ?></span>
                                 </div>
                                 <div id="wb_Text1">
-                                    <span id="wb_uid6">Категория: ХЛОПОК</span>
+                                    <span id="wb_uid6">Категория: <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $product->category->id])?>" style="color: #465296;"><?= $product->category->name ?></a></span>
                                 </div>
                                 <div id="wb_Text18">
-                                    <span id="wb_uid7"><strong>56 РУБ.</strong></span>
+                                    <span id="wb_uid7"><strong><?= $product->price ?> РУБ. ЗА 1 МХ</strong></span>
                                 </div>
                                 <div id="wb_Text3">
                                     <span id="wb_uid8">Количество Мx:</span>

@@ -28,6 +28,9 @@ class CategoryController extends AppController
     {
 
         $category = Category::findOne($id);
+        if(empty($category)){
+            throw new \yii\web\HttpException(404, 'Такая категория не существует');
+        }
 
         $this->setMeta('Магазин Мтекс | ' . $category->name, $category->keywords, $category->description);
 
