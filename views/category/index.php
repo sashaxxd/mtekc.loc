@@ -63,7 +63,8 @@ use yii\helpers\Html;
                                     <span id="mtex_uid5"><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id])?>"> <?= $hit->name;  ?></a></span>
                                 </div>
                                 <div id="mtex_FontAwesomeIcon6">
-                                    <div id="FontAwesomeIcon6"><i class="fa fa-shopping-cart">&nbsp;</i></div>
+                                    <a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $hit->id])?>" id="FontAwesomeIcon6" data-id="<?= $hit->id?>" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+
                                 </div>
                             </div>
 
@@ -112,7 +113,7 @@ use yii\helpers\Html;
                                             <span id="mtex_uid5"><?= $sale->name;  ?></span>
                                         </div>
                                         <div id="mtex_FontAwesomeIcon6">
-                                            <div id="FontAwesomeIcon6"><i class="fa fa-shopping-cart">&nbsp;</i></div>
+                                            <a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $sale->id])?>" id="FontAwesomeIcon6"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                     </div>
 

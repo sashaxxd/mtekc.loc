@@ -1,15 +1,15 @@
 $(document).ready(function()
 {
-    webshim.setOptions('forms-ext', {
-        replaceUI: 'auto',
-        types: 'range',
-        widgets: {
-            number: {
-                calculateWidth: false
-            }
-        }
-    });
-    webshim.polyfill('forms forms-ext');
+    // webshim.setOptions('forms-ext', {
+    //     replaceUI: 'auto',
+    //     types: 'range',
+    //     widgets: {
+    //         number: {
+    //             calculateWidth: false
+    //         }
+    //     }
+    // });
+    // webshim.polyfill('forms forms-ext');
 
     $(function(){
         $('.number-range-combi').combineNumberRange();
