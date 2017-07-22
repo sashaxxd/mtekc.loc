@@ -19,7 +19,7 @@ $this->title = $name;
 
     <p>
 
-  <a href="<?= \yii\helpers\Url::home()?>" style="color: #0b0b0b">Перейти на главную</a>
+  <a href="<?= \yii\helpers\Url::to('/')?>" style="color: #0b0b0b">Перейти на главную</a>
 
     </p>
 

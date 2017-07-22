@@ -77,12 +77,14 @@ AppAsset::register($this);
 <div id="mtex_LayoutGrid4">
     <div id="LayoutGrid4">
         <div class="row">
+            <form method="get" action="<?= \yii\helpers\Url::to(['category/search'])?>" >
             <div class="col-1">
-                <input type="text" id="Editbox1" name="Editbox1" value="" placeholder="ПОИСК ПО САЙТУ">
+                <input type="text" id="Editbox1" name="q" value="" placeholder="ПОИСК ПО САЙТУ">
             </div>
             <div class="col-2">
                 <input type="submit" id="Button1" name="" value="Найти">
             </div>
+            </form>
             <div class="col-3">
                 <div id="mtex_ResponsiveMenu1">
                     <ul class="ResponsiveMenu1" id="ResponsiveMenu1">
