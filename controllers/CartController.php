@@ -25,10 +25,15 @@ class CartController extends  AppController
         $session->open();
         $cart = new Cart();
         $cart->addToCart($product);
+        $this->layout = false;
+//        $session->destroy();
+//        Debug($session['cart']);
+//        Debug($session['cart.qty']);
+//        Debug($session['cart.sum']);
 //        Debug($product); die();
-//        return $this->render('add',[
-//           'id' => $id,
-//        ]);
+        return $this->render('cart-modal',[
+           'session' => $session,
+        ]);
     }
 
 }
