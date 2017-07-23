@@ -90,7 +90,7 @@ AppAsset::register($this);
                     <ul class="ResponsiveMenu1" id="ResponsiveMenu1">
                         <li><a href="#"><i class="fa fa-user fa-2x">&nbsp;</i><br>Вход</a></li>
                         <li><a href="#"><i class="fa fa-lock fa-2x">&nbsp;</i><br>Регистрация</a></li>
-                        <li><a href="#"><i class="fa fa-shopping-basket fa-2x">&nbsp;</i><br>Корзина</a></li>
+                        <li><a href="<?= \yii\helpers\Url::to(['cart/add'])?>" class="her" data-id="cart"><i class="fa fa-shopping-basket fa-2x">&nbsp;</i><br>Корзина</a></li>
                     </ul>
                 </div>
             </div>

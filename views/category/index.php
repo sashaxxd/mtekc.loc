@@ -113,7 +113,7 @@ use yii\helpers\Html;
                                             <span id="mtex_uid5"><?= $sale->name;  ?></span>
                                         </div>
                                         <div id="mtex_FontAwesomeIcon6">
-                                            <a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $sale->id])?>" id="FontAwesomeIcon6"><i class="fa fa-shopping-cart"></i></a>
+                                            <a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $sale->id])?>" data-id="<?= $sale->id?>" id="FontAwesomeIcon6" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                     </div>
 

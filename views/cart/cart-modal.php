@@ -5,7 +5,8 @@
             <tr>
                 <th>Фото</th>
                 <th>Наименование</th>
-                <th>Кол-во</th>
+                <th>Артикул</th>
+                <th>Кол-во Мx</th>
                 <th>Цена</th>
                 <th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
             </tr>
@@ -15,13 +16,14 @@
                 <tr>
                     <td><?= $item['img']?></td>
                     <td><?= $item['name']?></td>
+                    <td><?= $item['article']?></td>
                     <td><?= $item['qty']?></td>
                     <td><?= $item['price']?></td>
-                    <td><span class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
+                    <td><span data-id="<?= $id?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
                 </tr>
             <?php endforeach?>
             <tr>
-                <td colspan="4">Итого: </td>
+                <td colspan="4">Итого Мx: </td>
                 <td><?= $session['cart.qty']?></td>
             </tr>
             <tr>
