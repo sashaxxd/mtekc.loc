@@ -192,9 +192,9 @@ AppAsset::register($this);
     'header' => '<div class="cartmod"><h2>Корзина</h2></div>',
     'id' => 'cart',
     'size' => 'modal-lg',
-    'footer' => '<button type="button" id="Button_cart" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
-        <button type="button" id="Button_cart" class="btn btn-success">Оформить заказ</button>
-        <button type="button" id="Button_cart" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>'
+    'footer' => '<button type="button" id="Button_cart" class="btn" data-dismiss="modal">Продолжить покупки</button>
+        <a href="' . \yii\helpers\Url::to(['cart/view']) . '" id="Button_cart" class="btn">Оформить заказ</a>
+        <button type="button" id="Button_cart" class="btn" onclick="clearCart()">Очистить корзину</button>'
 ]);
 
 \yii\bootstrap\Modal::end();
