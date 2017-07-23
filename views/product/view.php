@@ -85,11 +85,11 @@ use yii\helpers\Html;
                                     <span id="wb_uid8">Количество Мx:</span>
                                 </div>
                                 <input type="range" id="Editbox2" name="Editbox2" value="0.5" step="0.5" max="100" min="0.5">
-                                <input type="number" id="Editbox3" name="Editbox2" value="0.5" maxlength="1" step="0.5" max="100" min="0.5">
+                                <input type="number" id="Editbox3" class="qty" name="Editbox2" value="0.5" maxlength="1" step="0.5" max="100" min="0.5">
                                 <div id="wb_Text4">
                                     <span id="wb_uid9">(хлопок 100%) <br>в наличии 250р/м<br>при покупке от 3х м 230р/м </span>
                                 </div>
-                                <input type="submit" id="Button2" name="" value="В корзину">
+                                <input type="submit" data-id="<?= $product->id ?>" class="add-to-cart" id="Button2" name="" value="В корзину">
                             </div>
                         </div>
                     </form>

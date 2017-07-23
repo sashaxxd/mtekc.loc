@@ -36,6 +36,8 @@ class CartController extends AppController{
 
     public function actionAdd(){
         $id = Yii::$app->request->get('id');
+        $qty = (float)Yii::$app->request->get('qty');
+        $qty = !$qty ? 0.5 : $qty;
         if($id === 'cart'){
             $session =Yii::$app->session;
             $session->open();
@@ -47,7 +49,7 @@ class CartController extends AppController{
         $session =Yii::$app->session;
         $session->open();
         $cart = new Cart();
-        $cart->addToCart($product);
+        $cart->addToCart($product, $qty);
         $this->layout = false;
         return $this->render('cart-modal', compact('session'));
     }
