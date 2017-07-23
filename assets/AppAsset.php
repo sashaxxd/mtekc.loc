@@ -28,7 +28,9 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
 
-        'js/jquery-1.12.4.min.js',
+//        'js/jquery-1.12.4.min.js',
+        'js/transition.min.js',
+        'js/modal.min.js',
         'js/panel.min.js',
         'js/panel.js',
         'js/jquery.magnific-popup.min.js',
@@ -45,7 +47,7 @@ class AppAsset extends AssetBundle
     ];
 //    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];   //Cкрипты в шапке
     public $depends = [
-//        'yii\web\YiiAsset',
-//        'yii\bootstrap\BootstrapAsset',
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
 }
